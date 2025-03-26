@@ -1,0 +1,64 @@
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(232, 168, 196);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 0;
+    overflow: hidden;
+}
+.FlashCard-container{
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(0,0,0,0.2);
+    max-width: 360px;
+    margin-bottom: 60px;
+
+}
+.FlashCard{
+    width: 90%;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-property: transform 0.6s;
+    margin: 0 auto
+}
+.FlashCard.is-flipped{
+    transform: rotateY(180deg);
+}
+.FlashCard div{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    background: linear-gradient(135deg,#f5f7fa,#c3cfe2 );
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+}
+.back{
+    transform: rotateY(180deg);
+}
+button{
+    margin: 10px;
+    padding: 12px 25px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(51, 44, 44);
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, tranform 0.2s;
+}
+button:hover{
+    background-color: black;
+}
+button:active{
+    transform: scale(0.95);
+}
